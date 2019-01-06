@@ -1,0 +1,123 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, grey 1px, transparent 1px), linear-gradient(to bottom, grey 1px, transparent 1px);
+  font-family: arial, sans-serif;
+}
+
+#tools {
+  width: 100px;
+  background-color: #000;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#tools ul {
+  margin: 25px 0;
+  padding: 0;
+}
+
+#tools li {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  color: #fff;
+  border: 2px solid #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add {
+  background: url('../images/cross.png') center no-repeat;
+  background-size: 50%;
+}
+
+#save {
+  background: url('../images/save.png') center no-repeat;
+  background-size: 70%;
+}
+
+#content {
+  width: 100%;
+  min-height: 100%;
+  vertical-align: top;
+  margin: auto;
+  padding-left: 100px;
+}
+
+.postIt {
+  width: 300px;
+  min-height: 50px;
+  background-color: #fdff8b;
+  position: absolute;
+  top: 0;
+  left: 120px;
+  box-shadow: 5px 5px 3px #d2d2d2;
+}
+
+.postIt > .actions {
+  width: 100%;
+  height: 30px;
+}
+
+.actions > .icon {
+  width: 25px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.actions > .close {
+  float: right;
+  background: url('../images/close.png') center no-repeat;
+  background-size: cover;
+}
+
+.actions > .grab {
+  float: left;
+  background: url('../images/grab.png') center no-repeat;
+  background-size: cover;
+}
+
+.content {
+  margin: 10px 0 0 0;
+  padding: 5px 10px 0 5px;
+  overflow-wrap: break-word;
+}
+
+.content > textarea {
+  width: 100%;
+  min-height: 50px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-family: "Comic Sans MS", arial, sans-serif;
+  resize: vertical;
+}
+
+.content > textarea:focus {
+  border: none;
+}
+
+.selected {
+  border: 1px dashed #000;
+  z-index: 9999;
+}
